@@ -13,4 +13,23 @@ class StaticPagesController < ApplicationController
 
   def ryc
   end
+
+  def ram
+  end
+
+  def tj_waterkeeper
+  end
+
+  def cet
+  end
+
+  def salvemos_playa
+  end
+
+  def eventos
+  end
+
+  def donativos
+  end
+
 end

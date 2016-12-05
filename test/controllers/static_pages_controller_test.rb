@@ -26,4 +26,34 @@ class StaticPagesControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
+  test "should get ram" do
+    get static_pages_ram_url
+    assert_response :success
+  end
+
+  test "should get tj_waterkeeper" do
+    get static_pages_tj_waterkeeper_url
+    assert_response :success
+  end
+
+  test "should get cet" do
+    get static_pages_cet_url
+    assert_response :success
+  end
+
+  test "should get salvemos_playa" do
+    get static_pages_salvemos_playa_url
+    assert_response :success
+  end
+
+  test "should get eventos" do
+    get static_pages_eventos_url
+    assert_response :success
+  end
+
+  test "should get donativos" do
+    get static_pages_donativos_url
+    assert_response :success
+  end
+
 end

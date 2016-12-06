@@ -1,0 +1,31 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.main {
+    flex: 1 0 auto;
+}
+
+.default-margin {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.no-margin {
+    margin: 0 !important;
+}
+
+.default-padding {
+    padding: 40px 30px;
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+.text-justified {
+    text-align: justify;
+    text-justify: inter-word;
+}

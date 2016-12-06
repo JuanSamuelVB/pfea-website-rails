@@ -7,9 +7,20 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag "https://fonts.googleapis.com/Icon?family=Material+Icons" %>
+
+    <%= stylesheet_link_tag "pfea" %>
+    <%= stylesheet_link_tag "pfea.colors" %>
+    <%= stylesheet_link_tag "pfea.footer" %>
+    <%= stylesheet_link_tag "pfea.icons" %>
+    <%= stylesheet_link_tag "pfea.images" %>
+    <%= stylesheet_link_tag "pfea.navbar" %>
+    <%= stylesheet_link_tag "pfea.parallax" %>
+    <%= stylesheet_link_tag "pfea.widgets" %>
   </head>
 
   <body>
+    <div class="main">
     <%= yield %>
+    </div>
   </body>
 </html>

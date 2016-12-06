@@ -18,3 +18,5 @@ Rails.application.config.assets.precompile += %w( pfea.images.css )
 Rails.application.config.assets.precompile += %w( pfea.navbar.css )
 Rails.application.config.assets.precompile += %w( pfea.parallax.css )
 Rails.application.config.assets.precompile += %w( pfea.widgets.css )
+
+Rails.application.config.assets.precompile += %w( pfea-script.js )

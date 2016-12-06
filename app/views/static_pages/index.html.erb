@@ -1,2 +1,149 @@
-<h1>StaticPages#index</h1>
-<p>Find me in app/views/static_pages/index.html.erb</p>
+<!-- Parallax -->
+<div class="parallax-container custom no-margin">
+    <div class="parallax-content">
+        <div class="parallax"><img src="{% static 'images/FRONTERA_NORTE.jpg' %}"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col m6 l6"></div>
+                <div class="col s12 m6 l6">
+                    <div class="text-container small valign-wrapper">
+                        <h4 class="center-block">25 años protegiendo nuestro océano, arroyos y costas</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="parallax-title left-align pfea-blue"></div>
+</div>
+
+<!-- Programas -->
+<div class="container default-margin">
+    <div class="row">
+        <div class="col m12 l4 center valign-wrapper">
+            <div class="center-block">
+                <img width="100" src="{% static 'images/tw.png' %}">
+                <h5>Tijuana Waterkeeper</h5>
+                <p>Te informamos semanalmente sobre la calidad del agua en la playa, para uso recreativo.</p>
+            </div>
+        </div>
+        <div class="col m12 l4 center valign-wrapper">
+            <div class="center-block">
+                <img width="100" src="{% static 'images/R.A.M._Logo-LetraBlanca.png' %}">
+                <h5>Restaurante Amigo del Mar</h5>
+                <p>Te enteramos de los graves impactos que ocasionan los plásticos desechables en el océano y las alternativas para prevenirlos.</p>
+            </div>
+        </div>
+        <div class="col m12 l4 center valign-wrapper">
+            <div class="center-block">
+                <img width="100" src="{% static 'images/cet_big.png' %}">
+                <h5>Corredores Ecológicos Transfronterizos</h5>
+                <p>Representamos tus inquietudes y propuestas en los Comités ciudadanos que se encargan de garantizar que se respeten tus derechos a un ambiente sano.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Estadisticas -->
+<div class="parallax-container custom center no-margin">
+    <div class="parallax"><img src="{% static 'images/Fondo3_fixed.jpg' %}"></div>
+    <div class="overlay dark-blue"></div>
+    <div class="container statistics-widget white-text valign-wrapper">
+        <div class="row">
+            <div class="col s12 m6 l3">
+                <img src="{% static 'images/icon-4.png' %}">
+                <h4 class="text-bold">70 ha</h4>
+                <p>Rescate de ecosistema ripario</p>
+            </div>
+            <div class="col s12 m6 l3">
+                <img src="{% static 'images/icon-5.png' %}">
+                <h4 class="text-bold">366</h4>
+                <p>Muestreos de calidad de agua</p>
+            </div>
+            <div class="col s12 m6 l3">
+                <img src="{% static 'images/icon-1.png' %}">
+                <h4 class="text-bold">220,000kg</h4>
+                <p>Residiuos sólidos retirados de playas, cañadas y arroyos</p>
+            </div>
+            <div class="col s12 m6 l3">
+                <img src="{% static 'images/icon-2.png' %}">
+                <h4 class="text-bold">45,000</h4>
+                <p>Voluntarios participantes en salvemos la playa</p>
+            </div>
+        </div>
+    </div>
+    <div class="parallax-title center pfea-orange"></div>
+</div>
+
+<!-- Suscripción -->
+<div class="container center default-margin default-padding">
+    <div class="row">
+        <div class="col s12 m12 l12 center-block">
+            <h4>Apóyanos como voluntario</h4>
+            <div class="divider"></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s12 m12 l12">
+            <p class="text-bold">El sueño de una frontera limpia y conciente solo puede hacerse realidad con tu apoyo</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s12 m12 l12">
+            <a class="waves-effect waves-light btn-large pfea-green" href="{% url 'pfea_app:voluntarios' %}">Apóyanos</a>
+        </div>
+    </div>
+</div>
+
+<!-- Parallax -->
+<div class="parallax-container custom no-margin">
+    <div class="parallax-content">
+        <div class="parallax"><img src="{% static 'images/DSCN5751.jpg' %}"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col s12 m6 l6">
+                    <div class="text-container small valign-wrapper">
+                        <p class="center-block title">Trabajamos para proteger las áreas naturales y espacios abiertos que brindan servicios ambientales a la cuenca del Río Tijuana, por sus beneficios para la comunidad y los ecosistemas</p>
+                    </div>
+                </div>
+                <div class="col m6 l6"></div>
+            </div>
+        </div>
+    </div>
+    <div class="parallax-title left-align pfea-green"></div>
+</div>
+
+<!-- Noticias, Videos y Facebook -->
+<div class="container center default-margin default-padding">
+    <div class="row">
+        <div class="col s12 m12 l12">
+            <h4>Ultimas Noticias</h4>
+            <div class="divider"></div>
+        </div>
+    </div>
+    <div class="row">
+        {% for new in news %}
+            <div class="col s12 m4 l4">
+                <div class="card medium">
+                    <div class="card-content">
+                        <span class="card-title">{{ new.title|safe }}</span>
+                    </div>
+                    <div class="card-action">
+                        <a href="{{ new.link }}">Ver más</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    <div class="row">
+        <div class="col s12 m7 l7">
+            <iframe width="100%" height="420" src="https://www.youtube.com/embed/YJycx3tsGX4"></iframe>
+        </div>
+        <div class="col s12 m5 l5">
+            <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fpfea.org&amp;tabs=timeline&amp;width=340&amp;height=420&amp;small_header=true&amp;adapt_container_width=true&amp;hide_cover=false&amp;show_facepile=true&amp;appId" width="340" height="420" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowtransparency="true" class="iframe-class"></iframe>
+        </div>
+    </div>
+</div>
+
+<!-- Mapa -->
+<iframe style="border: 0; width: 100%;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3363.8539109808767!2d-117.12374408529966!3d32.53004850384506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d94ba6b171d2fb%3A0x11ca295a1c440f0f!2sCalle+del+Volcan+632%2C+Playas%2C+Monumental%2C+Tijuana%2C+B.C.!5e0!3m2!1ses!2smx!4v1458275792589" allowfullscreen="allowfullscreen" width="300" height="315" frameborder="0"></iframe>
+

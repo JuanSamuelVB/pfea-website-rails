@@ -1,0 +1,146 @@
+<nav class="pfea-white">
+  <div class="nav-wrapper container">
+    <!-- Navbar -->
+    <a href="{% url 'pfea_app:index' %}" class="brand-logo">
+      <%= image_tag "pfea_logo-2.png", class: "logo small" %>
+    </a>
+    <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li>
+        <%= link_to "Inicio", root_url %>
+      </li>
+      <li>
+        <a class="dropdown-button" data-beloworigin="true" href="#" data-activates="quienes-somos-dropdown">
+          Quiénes somos
+          <i class="material-icons right">arrow_drop_down</i>
+        </a>
+      <li>
+        <a class="dropdown-button" data-beloworigin="true" href="#" data-activates="programas-dropdown">
+          Programas
+          <i class="material-icons right">arrow_drop_down</i>
+        </a>
+      </li>
+      <li>
+        <%= link_to "Eventos", eventos_url %>
+      </li>
+      <li>
+        <a class="dropdown-button" data-beloworigin="true" href="#" data-activates="apoyanos-dropdown">
+          Apóyanos
+          <i class="material-icons right">arrow_drop_down</i>
+        </a>
+      </li>
+    </ul>
+
+    <!-- SideNav -->
+    <ul class="side-nav" id="mobile-demo">
+      <!-- Inicio -->
+      <li>
+        <%= link_to "Inicio", root_url%>
+      </li>
+      <!-- Quienes somos -->
+      <li class="no-padding">
+        <ul class="collapsible collapsible-accordion"><li>
+        <a class="collapsible-header">
+          Quiénes somos
+        </a>
+        <div class="collapsible-body">
+          <ul>
+            <li>
+              <%= link_to "Misión, Visión y Principios", mvp_url%>
+            </li>
+            <li>
+              <%= link_to "Mensaje de la Dirección", mensaje_direccion_url%>
+            </li>
+            <li>
+              <%= link_to "Logros", logros_url%>
+            </li>
+            <li>
+              <%= link_to "Reconocimientos y Certificaciones", ryc_url%>
+            </li>
+          </ul>
+        </div>
+        </li></ul>
+      </li>
+      <!-- Proramas -->
+      <li class="no-padding">
+        <ul class="collapsible collapsible-accordion"><li>
+        <a class="collapsible-header">
+          Programas
+        </a>
+        <div class="collapsible-body">
+          <ul>
+            <li>
+              <%= link_to "Restaurantes Amigos del Mar", ram_url%>
+            </li>
+            <li>
+              <%= link_to "Tijuana Waterkeeper", tj_waterkeeper_url%>
+            </li>
+            <li>
+              <%= link_to "Corredores Ecológicos", cet_url%>
+            </li>
+            <li>
+              <%= link_to "Salvemos la Playa", salvemos_playa_url%>
+            </li>
+          </ul>
+        </div>
+        </li></ul>
+      </li>
+      <!-- Eventos -->
+      <li>
+        <%= link_to "Eventos", eventos_url %>
+      </li>
+      <!-- Apoyanos -->
+      <li class="no-padding">
+        <ul class="collapsible collapsible-accordion"><li>
+        <a class="collapsible-header">
+          Apóyanos
+        </a>
+        <div class="collapsible-body">
+          <ul>
+            <li>
+              <%= link_to "Donativos", donativos_url%>
+            </li>
+          </ul>
+        </div>
+        </li></ul>
+      </li>
+    </ul>
+
+  </div>
+</nav>
+
+<ul id="quienes-somos-dropdown" class="dropdown-content">
+  <li>
+    <%= link_to "Misión, Visión y Principios", mvp_url%>
+  </li>
+  <li>
+    <%= link_to "Mensaje de la Dirección", mensaje_direccion_url%>
+  </li>
+  <li>
+    <%= link_to "Logros", logros_url%>
+  </li>
+  <li>
+    <%= link_to "Reconocimientos y Certificaciones", ryc_url%>
+  </li>
+</ul>
+
+<ul id="programas-dropdown" class="dropdown-content">
+  <li>
+    <%= link_to "Restaurantes Amigos del Mar", ram_url%>
+  </li>
+  <li>
+    <%= link_to "Tijuana Waterkeeper", tj_waterkeeper_url%>
+  </li>
+  <li>
+    <%= link_to "Corredores Ecológicos", cet_url%>
+  </li>
+  <li>
+    <%= link_to "Salvemos la Playa", salvemos_playa_url%>
+  </li>
+</ul>
+
+<ul id="apoyanos-dropdown" class="dropdown-content">
+  <li>
+    <%= link_to "Donativos", donativos_url%>
+  </li>
+</ul>

@@ -19,9 +19,14 @@
   </head>
 
   <body>
+
+    <%= render "layouts/navbar" %>
+
     <div class="main">
     <%= yield %>
     </div>
+
+    <%= render "layouts/footer" %>
 
     <%= javascript_include_tag "pfea-script" %>
   </body>
